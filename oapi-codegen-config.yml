@@ -1,0 +1,8 @@
+package: sitespecific
+generate:
+  models: true
+  client: true
+output: metoffice-sitespecific-forecast.gen.go
+output-options:
+  overlay:
+    path: oapi-codegen-overlay.yml
