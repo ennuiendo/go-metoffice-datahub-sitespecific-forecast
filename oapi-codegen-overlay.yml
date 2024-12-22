@@ -1,0 +1,11 @@
+overlay: 1.0.0
+info:
+  title: Overlay to fix non-unique operationId
+  version: 0.0.0
+actions:
+- target: $["paths"]["/point/hourly"]["get"]["operationId"]
+  update: "getHourlyForecastForPointUsingGET"
+- target: $["paths"]["/point/three-hourly"]["get"]["operationId"]
+  update: "getThreeHourlyForecastForPointUsingGET"
+- target: $["paths"]["/point/daily"]["get"]["operationId"]
+  update: "getDailyForecastForPointUsingGET"
