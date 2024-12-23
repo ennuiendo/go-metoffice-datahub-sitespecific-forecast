@@ -11,3 +11,11 @@ actions:
   update: "getDailyForecastForPointUsingGET"
 - target: $["components"]["schemas"]["Point"]["properties"]["coordinates"]["items"]["type"]
   update: ["number"]
+- target: $["components"]["schemas"]["Properties"]["properties"]["timeSeries"]["type"]
+  update: "array"
+- target: $["components"]["schemas"]["Properties"]["properties"]["timeSeries"]
+  update:
+    items:
+      type: "object"
+      additionalProperties:
+      "$ref": "#/components/schemas/TimeSeries"

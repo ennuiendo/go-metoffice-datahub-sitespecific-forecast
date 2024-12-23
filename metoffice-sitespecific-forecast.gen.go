@@ -64,7 +64,7 @@ type Properties struct {
 	RequestPointDistance float32 `json:"requestPointDistance"`
 
 	// TimeSeries A time step ordered list  of forecast parameters and associated values
-	TimeSeries map[string]interface{} `json:"timeSeries"`
+	TimeSeries []TimeSeries `json:"timeSeries"`
 }
 
 // SpotForecastFeatureCollection A feature collection object, must have a member array of features
@@ -83,6 +83,15 @@ type SpotForecastFeatureCollection struct {
 type Symbol struct {
 	Type  *string `json:"type,omitempty"`
 	Value *string `json:"value,omitempty"`
+}
+
+// TimeSeries defines model for TimeSeries.
+type TimeSeries struct {
+	// Data A map of forecast parameters and associated values
+	Data *map[string]float32 `json:"data,omitempty"`
+
+	// Time Time of the forecast in UTC
+	Time string `json:"time"`
 }
 
 // Unit defines model for Unit.
