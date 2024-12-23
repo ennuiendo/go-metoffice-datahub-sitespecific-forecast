@@ -64,7 +64,7 @@ type Properties struct {
 	RequestPointDistance float32 `json:"requestPointDistance"`
 
 	// TimeSeries A time step ordered list  of forecast parameters and associated values
-	TimeSeries []TimeSeries `json:"timeSeries"`
+	TimeSeries []map[string]TimeSeries `json:"timeSeries"`
 }
 
 // SpotForecastFeatureCollection A feature collection object, must have a member array of features
