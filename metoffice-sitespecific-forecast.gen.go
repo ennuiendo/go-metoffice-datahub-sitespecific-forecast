@@ -47,7 +47,7 @@ type ParameterDetails struct {
 // Point defines model for Point.
 type Point struct {
 	// Coordinates The longitude, latitude and elevation values for the point
-	Coordinates []string `json:"coordinates"`
+	Coordinates []float32 `json:"coordinates"`
 
 	// Type The GeoJSON type identifier
 	Type string `json:"type"`

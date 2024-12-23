@@ -9,3 +9,5 @@ actions:
   update: "getThreeHourlyForecastForPointUsingGET"
 - target: $["paths"]["/point/daily"]["get"]["operationId"]
   update: "getDailyForecastForPointUsingGET"
+- target: $["components"]["schemas"]["Point"]["properties"]["coordinates"]["items"]["type"]
+  update: ["number"]
