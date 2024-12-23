@@ -17,5 +17,3 @@ actions:
   update:
     items:
       type: "object"
-      additionalProperties:
-        "$ref": "#/components/schemas/TimeSeries"
